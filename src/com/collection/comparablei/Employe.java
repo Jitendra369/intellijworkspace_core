@@ -13,6 +13,7 @@ public class Employe implements Comparable<Employe>{
 // if the string are not equal
     @Override
     public int compareTo(@NotNull Employe employe) {
+
         if (this.firstName.compareTo(employe.getFirstName())!= 0){
             return  this.firstName.compareTo(employe.getFirstName());
         }else{
