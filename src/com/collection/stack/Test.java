@@ -13,36 +13,18 @@ public class Test {
         stack.push("pooja");
         stack.push("ratna");
         stack.push("sahebrao");
+        
+        stack.pop();
+        String peek = stack.peek();
+        stack.forEach(item-> System.out.println(item));
+        System.out.println("value al the top of the stack : "+ peek);
 
-        Iterator<String> iterator = stack.iterator();
-
-//        stack values
-        while (iterator.hasNext()){
-            System.out.print(iterator.next() +" ");
+        int poojaIndex = stack.search("pooja");
+        if (poojaIndex==-1){
+            System.out.println("element not present in stack");
+        }else{
+            System.out.println("location of pooja in stack :"+ poojaIndex);
         }
-        System.out.println();
-        System.out.println("remove last element ");
-        String lastElement = stack.pop();
-
-        System.out.println("after removing the element from stack");
-
-        ArrayList<String> reve = new ArrayList<>();
-
-        TreeSet<String> tr = new TreeSet<>();
-
-
-
-//        iterator = stack.iterator();
-//        while(iterator.hasNext()){
-//            reve.add(iterator.next());
-//        }
-//
-//        System.out.println();
-//        Iterator<String> pr = reve.iterator();
-//        while(pr.hasNext()){
-//            System.out.print(pr.next()+" ");
-//        }
-
 
     }
 }
